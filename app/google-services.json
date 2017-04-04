@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "610039157325",
+    "firebase_url": "https://booky-47583.firebaseio.com",
+    "project_id": "booky-47583",
+    "storage_bucket": "booky-47583.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610039157325:android:2b7a2075832cb36a",
+        "android_client_info": {
+          "package_name": "com.example.nombu.booky"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "610039157325-q1relo6ppf3bqoja1i843qbnc2qghfi1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nombu.booky",
+            "certificate_hash": "fc1686384b9419b42ba4118e23ee118ffba95b78"
+          }
+        },
+        {
+          "client_id": "610039157325-mt3d4dtvfdi5mucgu8dk3lu9hg3si4i2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC50wzWRu7CKfX9I7_PBJ_4MMLuprHoL_s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "610039157325-mt3d4dtvfdi5mucgu8dk3lu9hg3si4i2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
