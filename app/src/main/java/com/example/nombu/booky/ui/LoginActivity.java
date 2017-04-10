@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth){
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, BookListActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();
@@ -56,7 +56,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         };
         mRegisterTextView.setOnClickListener(this);
         mPasswordEditText.setOnClickListener(this);
-        createAuthProgressDialog();
+        mPasswordLoginButton.setOnClickListener(this);
+       createAuthProgressDialog();
     }
 
     //Method associated with the View.OnClickListener interface
@@ -79,6 +80,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mAuthProgressDialog.setCancelable(false);
     }
     private void loginWithPassword() {
+        Log.d("buttonclick","yes");
         String email = mEmailEditText.getText().toString().trim();
         String password = mPasswordEditText.getText().toString().trim();
 
@@ -96,6 +98,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        mAuthProgressDialog.dismiss();
                         Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
                         if (!task.isSuccessful()){
                             Log.w(TAG, "signInWithEmail", task.getException());
